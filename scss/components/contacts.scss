@@ -57,19 +57,23 @@
 
 @media (min-width: 1024px) {
   .contacts {
-    transform: none;
-    position: initial;
+    height: 676px;
     display: flex;
     justify-content: center;
-    width: auto;
+    background:
+      linear-gradient(0deg, #eee 0%, #eee 100%),
+      lightgray 0px -382.687px / 100% 205.208% no-repeat;
 
-    &__first {
-      width: 700px;
-      height: 842px;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+    &__central {
+      display: flex;
+      position: absolute;
+      bottom: 180px;
     }
 
+    &__first {
+      width: clamp(450px, 40vw, 700px);
+      height: 842px;
+      border-radius: 20px 0px 0px 20px;
+    }
   }
-
 }

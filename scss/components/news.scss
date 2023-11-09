@@ -1,9 +1,10 @@
 .news {
-  padding-bottom: 120px;
+  padding: 101px 0 120px 0;
 
   &__items {
     display: grid;
     justify-items: center;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: clamp(20px, 10vw, 40px);
   }
@@ -12,18 +13,19 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 324px;
     height: 293px;
     border-radius: 45px 0 45px 0;
     filter: drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.05));
   }
-  
-  .news__item:nth-last-child(-n+3) {
+
+  .news__item:nth-last-child(-n + 3) {
     display: none;
   }
-  
+
   @media (min-width: 768px) {
-    .news__item:nth-last-child(-n+3) {
+    .news__item:nth-last-child(-n + 3) {
       display: block;
     }
   }
@@ -39,26 +41,34 @@
 
   &__item-img {
     margin-bottom: -30px;
-    width: 324px;
+    width: 100%;
     height: 185px;
     border-radius: 45px 0 0 0;
+  }
+
+  &__item-base {
+    width: 100%;
+    height: 143px;
+    position: relative;
+    bottom: 10px;
   }
 
   &__item-button {
     position: absolute;
     border: 0;
     background-color: transparent;
-    top: 56%;
-    right: 3%;
-    width: 77px;
-    height: 44px;
+    top: 55%;
+    right: 0%;
+    width: 90px;
+    height: 60px;
     background-image: url(../../public/news-button-small.svg);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
   }
 
   &__item-date {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     width: 39px;
     height: 76px;
     border-radius: 15px;
@@ -70,5 +80,47 @@
     align-items: center;
     justify-content: center;
     gap: 10px 0;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+  .news {
+    padding: 116px 0 526px 0;
+
+  }
+}
+
+@media (min-width: 1740px) {
+  .news {
+
+    &__item {
+      width: 414px;
+      height: 365px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(auto-fit, 414px);
+      gap: 40px 60px;
+    }
+
+    &__item-img {
+      width: 100%;
+      height: 262px;
+      border-radius: 45px 0 0 0;
+    }
+
+    &__item-base {
+      width: 100%;
+      height: 146px;
+    }
+
+    &__item-button {
+      width: 105px;
+      height: 120px;
+      top: 64%;
+      right: 2%;
+    }
   }
 }

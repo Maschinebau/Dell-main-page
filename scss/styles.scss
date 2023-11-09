@@ -21,23 +21,42 @@
 
 .body {
   background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   min-width: 375px;
+}
+
+.container {
+  min-width: 375px;
+  max-width: 1920px;
+  margin: 0 auto;
   overflow-x: hidden;
-  padding: 0 clamp(15px, 4vw, 260px) 0 clamp(15px, 4vw, 260px);
-  height: max-content;
+  padding: 0 15px;
   position: relative;
+
+  @media (min-width: 1640px) {
+    padding: 0 clamp(130px, 14vw, 260px) 0 clamp(130px, 14vw, 260px);
+    box-sizing: border-box;
+  }
 }
 
 .logo {
-  height: 60px;
-  width: 60px;
+  width: clamp(60px, 15vw, 70px);
+  height: clamp(60px, 15vw, 70px);
   background-image: url(../public/Dell_Logo.svg);
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+
+  &_footer {
+    width: clamp(70px, 15vw, 112px);
+    height: clamp(70px, 15vw, 112px);
+  }
 }
 
 .title-box {
-
   &__title {
     font-size: clamp(30px, 7vw, 50px);
     font-weight: 400;
@@ -78,5 +97,22 @@
     font-weight: 700;
     line-height: 35.143px;
     cursor: pointer;
+  }
+
+  &_news {
+    padding-bottom: clamp(40px, 10vw, 47px);
+
+    @media (min-width: 1280px) {
+      display: flex;
+      justify-content: space-between;
+      p {
+        max-width: 700px;
+      }
+    }
+  }
+
+  &_advantages {
+    max-width: 296px;
+    // padding-bottom: 180px;
   }
 }

@@ -81,7 +81,7 @@
   .form-wrapper {
     transform: none;
     position: initial;
-    width: 700px;
+    width: clamp(450px, 40vw, 700px);
     height: 842px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
