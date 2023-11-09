@@ -1,0 +1,68 @@
+.advantages {
+  background-color: $grey;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  min-width: 375px;
+  padding: 101px 15px 120px 15px;
+
+  &__items {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../public/advantages-frame.png);
+    width: clamp(345px, 80vw, 330px);
+    height: clamp(211px, 35vw, 289px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 18px;
+    padding: clamp(15px, 3vw, 30px);
+    gap: 15px 0;
+    color: white;
+  }
+
+  &__icon {
+    width: clamp(50px, 10vw, 70px);
+    height: clamp(50px, 10vw, 70px);
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__icon1 {
+    background-image: url("../../public/prices.svg");
+  }
+  &__icon2 {
+    background-image: url("../../public/service.svg");
+  }
+  &__icon3 {
+    background-image: url("../../public/quality.svg");
+  }
+  &__icon4 {
+    background-image: url("../../public/partners.svg");
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    color: white;
+  }
+
+  &__subtitle {
+    color: white;
+  }
+
+  @media (min-width: 700px) {
+    &__items {
+      gap: 27px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0;
+  gap: 20px;
+
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    background-color: $grey;
+    padding: 15px 22px 22px 22px;
+    border-radius: 20px;
+    // width: clamp(345px, 70vw, 440px);
+    max-width: 440px;
+
+    img {
+      max-width: 100%;
+    }
+    span {
+
+    }
+  }
+
+  @media (min-width: 768px) {
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+
+  }
+}

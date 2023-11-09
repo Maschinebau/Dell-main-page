@@ -1,0 +1,84 @@
+.header {
+  padding: 15px 0;
+  max-width: 100%;
+  z-index: 1;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0 15px;
+
+    li {
+      height: 46px;
+      width: 46px;
+      background-size: contain;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
+
+  &__profile {
+    background-image: url(../public/profile-icon.svg);
+  }
+
+  &__cart {
+    background-image: url(../public/cart-icon.svg);
+  }
+
+  &__nav-button {
+    background-image: url(../public/nav-icon.svg);
+    transition: transform 0.3s ease;
+
+    &.active {
+      background-image: url(../public/closenav-icon.svg);
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dropdown-menu {
+    display: none;
+    padding: 56px 38px;
+    animation: slideDown 0.6s ease;
+
+    &.active {
+      display: block;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 45px 0;
+    }
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  &__search {
+    border: 0;
+    background-image: url(../public/search-icon.png);
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

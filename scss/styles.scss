@@ -1,0 +1,82 @@
+@import "vars";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./components/catalog";
+@import "./components/preview";
+@import "./components//slider.scss";
+@import "./components/advantages";
+@import "./components/news";
+@import "./components/contacts";
+@import "./components/form";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.body {
+  background-color: rgba(255, 255, 255, 1);
+  min-width: 375px;
+  overflow-x: hidden;
+  padding: 0 clamp(15px, 4vw, 260px) 0 clamp(15px, 4vw, 260px);
+  height: max-content;
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  background-image: url(../public/Dell_Logo.svg);
+  background-size: contain;
+  background-position: center;
+}
+
+.title-box {
+
+  &__title {
+    font-size: clamp(30px, 7vw, 50px);
+    font-weight: 400;
+    line-height: 50px;
+    padding-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: clamp(15px, 3vw, 18px);
+    color: $grey-text;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: 30px;
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 15px;
+  }
+
+  &__button {
+    width: clamp(45px, 10vw, 55px);
+    height: clamp(45px, 10vw, 55px);
+    background-color: $accent;
+    background-image: url(../public/arrow-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    border: 0;
+    color: white;
+    color: var(--Unnamed-Color, #fff);
+    font-family: Circe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35.143px;
+    cursor: pointer;
+  }
+}
