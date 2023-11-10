@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-e04db865.js"></script>
-    <link rel="stylesheet" href="./assets/index-55912cb3.css">
+    <script type="module" crossorigin src="./assets/index-33fd9c77.js"></script>
+    <link rel="stylesheet" href="./assets/index-bcdb62a8.css">
   </head>
 
   <body class="body">
@@ -38,12 +38,20 @@
         </nav>
       </header>
 
-      <!-- <main class="main">
+      <main class="main">
+
+        <!--  PREVIEW -->
+
         <section class="preview">
           <div class="preview__wrapper">
+            <a class="preview__scroll-button" href="#">Scroll to catalog</a>
+
             <div class="title-box">
-              <p class="title-box__subtitle">Новое поступление</p>
-              <p class="title-box__title">Лучшие товары от компании Dell</p>
+              <p class="title-box__subtitle title-box__subtitle_preview">Новое поступление</p>
+              <p class="title-box__title title-box__title_preview">
+                Лучшие товары <br />
+                от компании Dell
+              </p>
               <div class="title-box__button-container">
                 <button class="title-box__button"></button>
                 <p class="title-box__button-text">Подробнее</p>
@@ -52,85 +60,98 @@
 
             <div id="slider" class="slider">
               <div class="slider__slides">
-                <img class="slider__img" src="/public/preview-notebook.png" alt="ноутбук" />
-                <img class="slider__img" src="/public/preview-notebook.png" alt="ноутбук" />
-                <img class="slider__img" src="/public/preview-notebook.png" alt="ноутбук" />
-                <img class="slider__img" src="/public/preview-notebook.png" alt="ноутбук" />
+                <img class="slider__img" src="./assets/preview-notebook-dc79a92a.png" alt="ноутбук" />
+                <img class="slider__img" src="./assets/preview-notebook-dc79a92a.png" alt="ноутбук" />
+                <img class="slider__img" src="./assets/preview-notebook-dc79a92a.png" alt="ноутбук" />
+                <img class="slider__img" src="./assets/preview-notebook-dc79a92a.png" alt="ноутбук" />
               </div>
+
               <div class="slider__nav-container">
                 <div class="slider__indicators"></div>
-                <button class="slider__next-btn">Arrow</button>
+                <button class="slider__next-btn"></button>
               </div>
             </div>
-
-            <a class="preview__img" href=""><p class="preview__img-text">Выгодное предложение от Dell</p></a>
           </div>
-        </section> -->
+          <a class="preview__img" href="#"><p class="preview__img-text">Выгодное предложение от Dell</p></a>
+        </section>
 
         <!-- CATALOG -->
 
         <section class="catalog">
-          <div class="title-box">
-            <p class="title-box__title">Каталог товаров от Dell</p>
-            <p class="title-box__subtitle">
-              Наша компания является зарегистрированным и официальным партнером Dell в России.
-            </p>
-            <div class="title-box__button-container">
-              <button class="title-box__button"></button>
-              <p class="title-box__button-text">В каталог</p>
-            </div>
-          </div>
-
-          <div class="catalog__item">
-            <span>01</span>
-            <img src="./assets/notebooks-c125e039.png" alt="" />
-            <p class="catalog__title">105 товаров</p>
-            <p class="catalog__subtitle">Ноутбуки</p>
-          </div>
-          <div class="catalog__item">
-            <span>02</span>
-            <img src="./assets/pcs-4e493f4a.png" alt="" />
-            <p class="catalog__title">65 товаров</p>
-            <p class="catalog__subtitle">Персональные компьютеры</p>
-          </div>
-          <div class="catalog__item">
-            <span>03</span>
-            <img src="./assets/servers-0898a19f.png" alt="" />
-            <p class="catalog__title">13 товаров</p>
-            <p class="catalog__subtitle">Cерверы</p>
-          </div>
-          <div class="catalog__item">
-            <span>04</span>
-            <img src="./assets/emc-76134072.png" alt="" />
-            <p class="catalog__title">2345 товаров</p>
-            <p class="catalog__subtitle">Dell EMC</p>
-          </div>
-          <div class="catalog__item">
-            <span></span>
-            <img src="./assets/emc-parts-e200daf0.png" alt="" />
-            <p class="catalog__title">195 товаров</p>
-            <p class="catalog__subtitle">Запасные части к Dell EMC</p>
-          </div>
+          <ul class="catalog__items">
+            <li>
+              <div class="title-box title-box_catalog">
+                <p class="title-box__title title-box__title_catalog">Каталог товаров от Dell</p>
+                <p class="title-box__subtitle">
+                  Наша компания является зарегистрированным и официальным партнером Dell в России.
+                </p>
+                <div class="title-box__button-container">
+                  <button class="title-box__button"></button>
+                  <p class="title-box__button-text">В каталог</p>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <span>01</span>
+              <img src="./assets/notebooks-c125e039.png" alt="ноутбуки" />
+              <div>
+                <p class="catalog__title">105 товаров</p>
+                <p class="catalog__subtitle">Ноутбуки</p>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <span>02</span>
+              <img src="./assets/pcs-4e493f4a.png" alt="компьютеры" />
+              <div>
+                <p class="catalog__title">65 товаров</p>
+                <p class="catalog__subtitle">Персональные компьютеры</p>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <span>03</span>
+              <img src="./assets/servers-0898a19f.png" alt="серверы" />
+              <div>
+                <p class="catalog__title">13 товаров</p>
+                <p class="catalog__subtitle">Cерверы</p>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <span>04</span>
+              <img src="./assets/emc-76134072.png" alt="emc" />
+              <div>
+                <p class="catalog__title">2345 товаров</p>
+                <p class="catalog__subtitle">Dell EMC</p>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <span>06</span>
+              <img src="./assets/emc-parts-e200daf0.png" alt="запасные части emc" />
+              <div>
+                <p class="catalog__title">195 товаров</p>
+                <p class="catalog__subtitle">Запасные части к Dell EMC</p>
+              </div>
+            </li>
+          </ul>
         </section>
 
-          <!-- ADVANTAGES -->
+        <!-- ADVANTAGES -->
 
         <section class="advantages">
           <div class="advantages__title-container">
-          <div class="title-box title-box_advantages">
-            <p class="title-box__title">Наши преимущества</p>
-            <p class="title-box__subtitle">
-              Оптимизация мощностей (расходов, социальных выплат и т.п.) позволили компании на 4,7% понизить
-              цены по сравнению с конкурентами
-            </p>
-            <div class="title-box__button-container">
-              <button class="title-box__button"></button>
-              <p class="title-box__button-text">Оставить заявку</p>
+            <div class="title-box title-box_advantages">
+              <p class="title-box__title">Наши преимущества</p>
+              <p class="title-box__subtitle">
+                Оптимизация мощностей (расходов, социальных выплат и т.п.) позволили компании на 4,7% понизить
+                цены по сравнению с конкурентами
+              </p>
+              <div class="title-box__button-container">
+                <button class="title-box__button"></button>
+                <p class="title-box__button-text">Оставить заявку</p>
+              </div>
             </div>
+            <div class="advantages__best"></div>
+            <img class="advantages__img" src="./assets/advantages-main-f64f0bba.png" alt="ноутбук" />
           </div>
-          <div class="advantages__best"></div>
-          <img class="advantages__img" src="./assets/advantages-main-f64f0bba.png" alt="ноутбук">
-        </div>
           <ul class="advantages__items">
             <li class="advantages__item">
               <div class="advantages__icon advantages__icon1"></div>
@@ -176,12 +197,12 @@
         <section class="news">
           <div class="title-box title-box_news">
             <div>
-            <p class="title-box__title">Последние новости</p>
-            <p class="title-box__subtitle">
-              Вы можете посмотреть ещё больше интересных новостей и узнать о последних новинках, перейдя по
-              кнопке
-            </p>
-          </div>
+              <p class="title-box__title">Последние новости</p>
+              <p class="title-box__subtitle">
+                Вы можете посмотреть ещё больше интересных новостей и узнать о последних новинках, перейдя по
+                кнопке
+              </p>
+            </div>
             <div class="title-box__button-container">
               <p class="title-box__button-text">Все новости</p>
               <button class="title-box__button"></button>
@@ -317,20 +338,20 @@
 
                 <div class="form__input-group">
                   <label class="form__label" for="name">Ваше имя</label>
-                  <input class="form__input" type="text" id="name" name="name" placeholder="" />
+                  <input class="form__input" type="text" id="name" name="name" placeholder="" required/>
                 </div>
                 <div class="form__input-group">
-                  <span></span>
+                  <span id="name"></span>
                   <label class="form__label" for="phone">Номер телефона</label>
-                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="" />
+                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="" required/>
                 </div>
                 <div class="form__input-group">
-                  <span></span>
+                  <span id="number"></span>
                   <label class="form__label">Комментарий</label>
                   <textarea class="form__input form__textinput"></textarea>
                 </div>
                 <div class="form__button-container title-box__button-container">
-                  <button class="title-box__button"></button>
+                  <button class="title-box__button" type="submit"></button>
                   <p class="title-box__button-text">Оставить заявку</p>
                 </div>
               </form>
@@ -386,7 +407,7 @@
           </div>
           <div class="footer__contact">
             <p>Телефон</p>
-            <p>+7 495 737-06-01, <br>+7 495 737-06-01</p>
+            <p>+7 495 737-06-01, <br />+7 495 737-06-01</p>
           </div>
           <div class="footer__contact">
             <p>mail</p>
