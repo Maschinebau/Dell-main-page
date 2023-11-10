@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-33fd9c77.js"></script>
-    <link rel="stylesheet" href="./assets/index-bcdb62a8.css">
+    <script type="module" crossorigin src="./assets/index-f642b7da.js"></script>
+    <link rel="stylesheet" href="./assets/index-4fb71dac.css">
   </head>
 
   <body class="body">
@@ -20,26 +20,35 @@
       <header class="header">
         <div class="header__wrapper">
           <div class="logo"></div>
-          <button type="button" class="header__search"></button>
-          <ul class="header__menu">
-            <li class="header__profile"></li>
-            <li class="header__cart"></li>
-            <li class="header__nav-button"></li>
-          </ul>
+          <nav class="header__dropdown-menu">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Наш АСЦ</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><button type="button" class="header__search"></button></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="header__dropdown-menu">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Наш АСЦ</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
+        <ul class="header__menu">
+          <li class="header__profile">
+            <ul class="header__profile-nav">
+              <li>Мария</li>
+              <li>Личный кабинет</li>
+              <li>История заказов</li>
+              <li>Персональные предложения</li>
+              <li>Выйти</li>
+            </ul>
+          </li>
+          <li class="header__signal"></li>
+          <li class="header__liked"></li>
+          <li class="header__cart"><div class="header__cart-counter">3</div></li>
+          <li class="header__nav-button"></li>
+        </ul>
       </header>
 
       <main class="main">
-
         <!--  PREVIEW -->
 
         <section class="preview">
@@ -311,10 +320,10 @@
                   <li class="contacts__contact">
                     <div class="contacts__icon"></div>
                     <p>Телефон</p>
-                    <div>
-                      <p>+7 495 737-06-01</p>
-                      <p>+7 495 737-06-01</p>
-                    </div>
+                    <p>
+                      +7 495 737-06-01 <br />
+                      +7 495 737-06-01
+                    </p>
                   </li>
                   <li class="contacts__contact">
                     <div class="contacts__icon"></div>
@@ -338,20 +347,24 @@
 
                 <div class="form__input-group">
                   <label class="form__label" for="name">Ваше имя</label>
-                  <input class="form__input" type="text" id="name" name="name" placeholder="" required/>
+                  <input class="form__input" type="text" id="name" name="name" placeholder="" required />
+                  <span id="nameSpan"></span>
                 </div>
                 <div class="form__input-group">
-                  <span id="name"></span>
                   <label class="form__label" for="phone">Номер телефона</label>
-                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="" required/>
+                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="" required />
+                  <span id="numberSpan"></span>
                 </div>
                 <div class="form__input-group">
-                  <span id="number"></span>
                   <label class="form__label">Комментарий</label>
                   <textarea class="form__input form__textinput"></textarea>
                 </div>
                 <div class="form__button-container title-box__button-container">
-                  <button class="title-box__button" type="submit"></button>
+                  <button
+                    class="title-box__button title-box__button_form"
+                    id="formButton"
+                    type="submit"
+                  ></button>
                   <p class="title-box__button-text">Оставить заявку</p>
                 </div>
               </form>
