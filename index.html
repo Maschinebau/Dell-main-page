@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-f642b7da.js"></script>
-    <link rel="stylesheet" href="./assets/index-4fb71dac.css">
+    <script type="module" crossorigin src="./assets/index-806e881f.js"></script>
+    <link rel="stylesheet" href="./assets/index-45eef540.css">
   </head>
 
   <body class="body">
@@ -53,9 +53,9 @@
 
         <section class="preview">
           <div class="preview__wrapper">
-            <a class="preview__scroll-button" href="#">Scroll to catalog</a>
+            <a class="preview__scroll-button" href="#catalog">Scroll to catalog</a>
 
-            <div class="title-box">
+            <div class="title-box title-box_preview">
               <p class="title-box__subtitle title-box__subtitle_preview">Новое поступление</p>
               <p class="title-box__title title-box__title_preview">
                 Лучшие товары <br />
@@ -74,19 +74,20 @@
                 <img class="slider__img" src="./assets/preview-notebook-dc79a92a.png" alt="ноутбук" />
                 <img class="slider__img" src="./assets/preview-notebook-dc79a92a.png" alt="ноутбук" />
               </div>
-
-              <div class="slider__nav-container">
-                <div class="slider__indicators"></div>
-                <button class="slider__next-btn"></button>
-              </div>
+            </div>
+            <div class="slider__nav-container">
+              <div class="slider__indicators"></div>
+              <button class="slider__next-btn"></button>
             </div>
           </div>
+          
           <a class="preview__img" href="#"><p class="preview__img-text">Выгодное предложение от Dell</p></a>
+          <div><div class="preview__dell-background"></div></div>
         </section>
 
         <!-- CATALOG -->
 
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <ul class="catalog__items">
             <li>
               <div class="title-box title-box_catalog">
@@ -94,7 +95,7 @@
                 <p class="title-box__subtitle">
                   Наша компания является зарегистрированным и официальным партнером Dell в России.
                 </p>
-                <div class="title-box__button-container">
+                <div class="title-box__button-container title-box__button-container_catalog">
                   <button class="title-box__button"></button>
                   <p class="title-box__button-text">В каталог</p>
                 </div>
@@ -148,7 +149,7 @@
         <section class="advantages">
           <div class="advantages__title-container">
             <div class="title-box title-box_advantages">
-              <p class="title-box__title">Наши преимущества</p>
+              <p class="title-box__title title-box__title_advantages">Наши преимущества</p>
               <p class="title-box__subtitle">
                 Оптимизация мощностей (расходов, социальных выплат и т.п.) позволили компании на 4,7% понизить
                 цены по сравнению с конкурентами
@@ -165,7 +166,10 @@
             <li class="advantages__item">
               <div class="advantages__icon advantages__icon1"></div>
               <div>
-                <p class="advantages__title">У нас самые выгодные и низкие цены</p>
+                <p class="advantages__title">
+                  Cамые выгодные <br />
+                  и низкие цены
+                </p>
                 <p class="advantages__subtitle">
                   В наличии широкий ассортимент, а также доступные цены на ноутбуки Dell
                 </p>
@@ -212,9 +216,9 @@
                 кнопке
               </p>
             </div>
-            <div class="title-box__button-container">
+            <div class="title-box__button-container title-box__button-container_news">
               <p class="title-box__button-text">Все новости</p>
-              <button class="title-box__button"></button>
+              <button class="title-box__button title-box_news-button"></button>
             </div>
           </div>
 
@@ -223,8 +227,11 @@
               <img class="news__item-img" src="./assets/news-img-151c5a9b.png" alt="внутренности пк" />
               <img class="news__item-base" src="data:image/png;base64,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" alt="" />
               <div class="news__item-text">
-                <p class="news__item-title">GE использует технологии Dell</p>
-                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных</p>
+                <p class="news__item-title">
+                  GE использует <br />
+                  технологии Dell
+                </p>
+                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных новостей</p>
               </div>
               <button class="news__item-button" type="button"></button>
               <div class="news__item-date">
@@ -236,8 +243,11 @@
               <img class="news__item-img" src="./assets/news-img2-8c055179.png" alt="внутренности пк" />
               <img class="news__item-base" src="data:image/png;base64,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" alt="" />
               <div class="news__item-text">
-                <p class="news__item-title">GE использует технологии Dell</p>
-                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных</p>
+                <p class="news__item-title">
+                  GE использует <br />
+                  технологии Dell
+                </p>
+                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных новостей</p>
               </div>
               <button class="news__item-button" type="button"></button>
               <div class="news__item-date">
@@ -249,8 +259,11 @@
               <img class="news__item-img" src="./assets/news-img-151c5a9b.png" alt="внутренности пк" />
               <img class="news__item-base" src="data:image/png;base64,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" alt="" />
               <div class="news__item-text">
-                <p class="news__item-title">GE использует технологии Dell</p>
-                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных</p>
+                <p class="news__item-title">
+                  GE использует <br />
+                  технологии Dell
+                </p>
+                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных новостей</p>
               </div>
               <button class="news__item-button" type="button"></button>
               <div class="news__item-date">
@@ -262,8 +275,11 @@
               <img class="news__item-img" src="./assets/news-img2-8c055179.png" alt="внутренности пк" />
               <img class="news__item-base" src="data:image/png;base64,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" alt="" />
               <div class="news__item-text">
-                <p class="news__item-title">GE использует технологии Dell</p>
-                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных</p>
+                <p class="news__item-title">
+                  GE использует <br />
+                  технологии Dell
+                </p>
+                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных новостей</p>
               </div>
               <button class="news__item-button" type="button"></button>
               <div class="news__item-date">
@@ -275,8 +291,11 @@
               <img class="news__item-img" src="./assets/news-img-151c5a9b.png" alt="внутренности пк" />
               <img class="news__item-base" src="data:image/png;base64,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" alt="" />
               <div class="news__item-text">
-                <p class="news__item-title">GE использует технологии Dell</p>
-                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных</p>
+                <p class="news__item-title">
+                  GE использует <br />
+                  технологии Dell
+                </p>
+                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных новостей</p>
               </div>
               <button class="news__item-button" type="button"></button>
               <div class="news__item-date">
@@ -288,8 +307,11 @@
               <img class="news__item-img" src="./assets/news-img2-8c055179.png" alt="внутренности пк" />
               <img class="news__item-base" src="data:image/png;base64,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" alt="" />
               <div class="news__item-text">
-                <p class="news__item-title">GE использует технологии Dell</p>
-                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных</p>
+                <p class="news__item-title">
+                  GE использует <br />
+                  технологии Dell
+                </p>
+                <p class="news__item-subtitle">Вы можете посмотреть ещё больше интересных новостей</p>
               </div>
               <button class="news__item-button" type="button"></button>
               <div class="news__item-date">
@@ -306,7 +328,7 @@
           <div class="contacts__central">
             <div class="contacts__first">
               <div class="contacts__wrapper">
-                <div class="title-box">
+                <div class="title-box title-box_contacts">
                   <p class="title-box__title">Наши контакты</p>
                   <p class="title-box__subtitle">Вы можете связаться с нашим онлайн-консультантом</p>
                 </div>
@@ -315,7 +337,15 @@
                   <li class="contacts__contact">
                     <div class="contacts__icon"></div>
                     <p>Адрес</p>
-                    <p>Москва, ул. 3-я Хорошевская, дом 2, строение 1</p>
+                    <p>
+                      Москва, ул. 3-я Хорошевская, <br />
+                      дом 2, строение 1
+                    </p>
+                  </li>
+                  <li class="contacts__contact">
+                    <div class="contacts__icon"></div>
+                    <p>E-mail</p>
+                    <p>dell_ru@gmail.com</p>
                   </li>
                   <li class="contacts__contact">
                     <div class="contacts__icon"></div>
@@ -325,22 +355,18 @@
                       +7 495 737-06-01
                     </p>
                   </li>
-                  <li class="contacts__contact">
-                    <div class="contacts__icon"></div>
-                    <p>mail</p>
-                    <p>dell_ru@gmail.com</p>
-                  </li>
                 </ul>
-                <div class="footer__icons">
+                <div class="footer__icons contacts__footer-icons">
                   <a href="#"><img class="footer__icon" src="./assets/facebook-7ce498d2.svg" alt="facebook" /></a>
                   <a href="#"><img class="footer__icon" src="./assets/whatsapp-8feaca1c.svg" alt="whatsapp" /></a>
                 </div>
+                <img class="contacts__phone-img" src="./assets/iPhone-13-Pro-Max-a0008c9d.png" alt="" />
               </div>
             </div>
 
             <div class="form-wrapper">
               <form class="form">
-                <div class="title-box">
+                <div class="title-box title-box_form">
                   <p class="title-box__title">Оставьте заявку</p>
                   <p class="title-box__subtitle">Оставьте свой номер, и мы перезвоним Вам.</p>
                 </div>
@@ -370,6 +396,7 @@
               </form>
             </div>
           </div>
+          <div class="contacts__background-text"></div>
         </section>
       </main>
 
