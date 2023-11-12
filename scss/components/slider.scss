@@ -25,7 +25,7 @@
     cursor: pointer;
     background: url(/public/preview-arrow.svg) no-repeat center / contain;
     background-color: transparent;
-    width: clamp(64px, 5vw, 104px);
+    width: clamp(64px, 10vw, 104px);
     height: 21px;
   }
 
@@ -39,24 +39,29 @@
 
     @media (min-width: 470px) {
       top: 65%;
-      right: 8%;
+      right: 9%;
+    }
+
+    @media (min-width: 1024px) {
+      top: 53%;
+      right: 18%;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     width: 557px;
 
     &__nav-container {
-      bottom: 24%;
-      right: 19%;
+      top: 43%;
+      right: 13%;
     }
   }
-  
-  @media (min-width: 1024px) {
+
+  @media (min-width: 1600px) {
     width: 557px;
 
     &__nav-container {
-      bottom: 24%;
+      top: 73%;
       right: 19%;
     }
   }

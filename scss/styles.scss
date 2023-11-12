@@ -36,7 +36,6 @@
   max-width: 1920px;
   margin: 0 auto;
   overflow-x: hidden;
-  // padding: 0 15px;
   position: relative;
   padding: 0 15px;
 
@@ -48,7 +47,6 @@
   @media (min-width: 1900px) {
     padding-left: clamp(77px, 14vw, 260px);
     padding-right: clamp(77px, 14vw, 260px);
-    // padding: 0 260px;
     box-sizing: border-box;
   }
 }
