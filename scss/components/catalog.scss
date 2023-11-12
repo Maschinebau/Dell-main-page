@@ -1,42 +1,97 @@
-
 .catalog {
   display: flex;
   flex-direction: column;
-  padding: 120px 0;
+  padding-top: clamp(120px, 15vw, 164px);
+  padding-bottom: clamp(120px, 15vw, 235px);
   gap: 20px;
 
   &__title {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(131, 131, 131, 1);
+    width: 125px;
+    height: 19px;
   }
 
   &__subtitle {
+    font-size: clamp(20px, 1.5vw, 25px);
+    font-weight: 400;
+    color: rgba(41, 45, 50, 1);
+    width: 125px;
+    height: 29px;
+    text-wrap: nowrap;
   }
 
   &__items {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
     gap: 20px;
+    justify-items: center;
+
+    li:nth-child(2) {
+      height: 275px;
+
+      @media(min-width: 1500px) {
+        height: 371px;
+      }
+    }
   }
 
   &__item {
+    position: relative;
     background-color: $grey;
-    padding: 15px 22px 22px 22px;
-    border-radius: 20px;
-    // width: clamp(345px, 70vw, 440px);
-    max-width: 440px;
+    border-radius: 10px;
+    width: 345px;
+    height: 291px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     img {
-      max-width: 100%;
+      width: 90%;
+      height: 75%;
     }
     span {
-
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: clamp(20px, 3vw, 25px);
+      font-weight: 100;
+      color: rgba(41, 45, 50, 1);
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1500px) {
 
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 40px;
 
+      li:first-child {
+        justify-self: start;
+      }
+    }
+
+    &__item {
+      border-radius: 20px;
+      width: 440px;
+      height: 371px;
+      padding: 40px;
+
+      span {
+        top: 45px;
+        left: 40px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__subtitle {
+      margin-top: 18px;
+    }
   }
 }

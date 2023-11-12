@@ -1,0 +1,146 @@
+.title-box {
+  z-index: 2;
+
+  &_preview {
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: 400;
+    padding-bottom: 20px;
+
+    &_catalog {
+      width: clamp(250px, 25vw, 390px);
+    }
+
+    &_preview {
+      padding-bottom: clamp(28px, 5vw, 60px);
+    }
+
+    &_advantages {
+      padding-bottom: 29px;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(15px, 1vw, 18px);
+    color: $grey-text;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: clamp(30px, 3vw, 47px);
+
+    &_preview {
+      padding-bottom: 0;
+
+      @media (min-width: 768px) {
+        padding-bottom: clamp(15px, 2vw, 15px);
+      }
+
+      @media (min-width: 1024px) {
+        padding-bottom: clamp(15px, 2vw, 15px);
+        padding-top: 93px;
+      }
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 15px;
+
+    &_catalog {
+      padding-bottom: 19px;
+    }
+
+    &_news {
+      @media (min-width: 1440px) {
+        align-self: start;
+      }
+    }
+  }
+
+  &__button {
+    width: clamp(45px, 10vw, 55px);
+    height: clamp(45px, 10vw, 55px);
+    background-color: $accent;
+    background-image: url(../public/arrow-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    border: 0;
+    color: white;
+    color: var(--Unnamed-Color, #fff);
+    font-family: Circe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35.143px;
+    cursor: pointer;
+
+    &_form:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+  }
+
+  &__button:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+  }
+
+  &_form {
+    p:first-of-type {
+      padding-bottom: 14px;
+    }
+
+    p:nth-of-type(2) {
+      padding-bottom: 39px;
+    }
+  }
+
+  &_contacts {
+    max-width: 260px;
+
+    p:first-of-type {
+      margin-bottom: 3px;
+    }
+
+    p:nth-of-type(2) {
+      padding-bottom: clamp(41px, 5vw, 48px);
+    }
+
+    @media(min-width: 500px) {
+      max-width: initial;
+    }
+  }
+
+  &_news {
+    padding-bottom: clamp(40px, 4vw, 47px);
+
+    @media (min-width: 1280px) {
+      padding-bottom: 27px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        max-width: 700px;
+      }
+    }
+
+  }
+
+  &_advantages {
+    width: clamp(296px, 48vw, 492px);
+    margin-bottom: -17px;
+
+    @media (min-width: 1280px) {
+      align-self: flex-end;
+    }
+  }
+
+  &_catalog {
+    max-width: 345px;
+  }
+}

@@ -1,17 +1,20 @@
 {
+  "homepage": ".",
   "name": "dell-main-page",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "sass": "^1.69.5"
   }
 }

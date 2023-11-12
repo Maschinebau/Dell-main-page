@@ -104,10 +104,20 @@
     &__contacts {
       flex-direction: row;
       justify-content: space-between;
+      margin-top: 40px;
     }
 
     &__icons {
       align-self: center;
+    }
+
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__links-wrapper {
+      flex-direction: row-reverse;
+      margin-right: 190px;
     }
   }
 }

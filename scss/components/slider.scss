@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  width: 100%;
+  width: 93.5%;
   overflow: hidden;
 
   &__img {
@@ -11,6 +11,7 @@
   &__slides {
     display: flex;
     transition: transform 0.5s ease;
+    position: relative;
   }
 
   &__indicators {
@@ -22,15 +23,42 @@
   &__next-btn {
     border: 0;
     cursor: pointer;
+    background: url(/public/preview-arrow.svg) no-repeat center / contain;
+    background-color: transparent;
+    width: clamp(64px, 5vw, 104px);
+    height: 21px;
   }
 
   &__nav-container {
-    position: absolute;
+    position: fixed;
     display: flex;
-    box-sizing: border-box;
-    gap: 39px;
-    bottom: 25px;
-    left: 150px;
+    column-gap: clamp(39px, 5vw, 80px);
+    top: 70.5%;
+    right: 4%;
+    overflow: visible;
+
+    @media (min-width: 470px) {
+      top: 65%;
+      right: 8%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 557px;
+
+    &__nav-container {
+      bottom: 24%;
+      right: 19%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    width: 557px;
+
+    &__nav-container {
+      bottom: 24%;
+      right: 19%;
+    }
   }
 }
 

@@ -1,18 +1,18 @@
 .advantages {
   background-color: $grey;
   position: relative;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
   min-width: 375px;
-  // padding: 101px 15px 120px 15px;
-  padding-top: clamp(101px, 10vw, 127px);
+  padding-top: clamp(106px, 10vw, 127px);
   padding-bottom: 120px;
-  // padding-left: clamp(15px, 5vw, 210px);
-  // padding-right: clamp(15px, 5vw, 210px);
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1920px;
 
   &__items {
     display: grid;
@@ -24,14 +24,14 @@
   &__item {
     display: flex;
     flex-direction: column;
-    background-image: url(../../public/advantages-frame.png);
-    width: clamp(345px, 80vw, 330px);
+    background-image: url(/public/advantages-frame.png);
+    width: 345px;
     height: clamp(211px, 35vw, 289px);
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 18px;
+    border-radius: 10px;
     padding: clamp(15px, 3vw, 30px);
-    gap: 15px 0;
+    row-gap: clamp(15px, 3vw, 25px);
     color: white;
   }
 
@@ -45,50 +45,109 @@
   }
 
   &__icon1 {
-    background-image: url("../../public/prices.svg");
+    background-image: url("/public/prices.svg");
   }
   &__icon2 {
-    background-image: url("../../public/service.svg");
+    background-image: url("/public/service.svg");
   }
   &__icon3 {
-    background-image: url("../../public/quality.svg");
+    background-image: url("/public/quality.svg");
   }
   &__icon4 {
-    background-image: url("../../public/partners.svg");
+    background-image: url("/public/partners.svg");
   }
 
   &__title {
-    padding-bottom: 10px;
-    color: white;
+    margin-bottom: clamp(10px, 3vw, 25px);
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    width: 296px;
+    height: 46px;
   }
 
   &__subtitle {
-    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(183, 183, 183, 1);
+    width: 319px;
+    height: 60px;
+    max-width: 276px;
   }
 
   &__img {
-    max-width: 95%;
-    max-height: 50%;
+    max-width: 100%;
     position: relative;
-    right: -20%;
-    bottom: 10vh;
+    right: -17%;
+    bottom: 38px;
+    z-index: -1;
+  }
+
+  &__best {
+    width: 100%;
+    height: clamp(121px, 30vw, 346px);
+    position: absolute;
+    left: 48%;
+    top: 24%;
+    transform: translateX(-50%);
+    background: url(/public/best-quality.svg) center/contain no-repeat;
+    z-index: -1;
   }
 
   @media (min-width: 700px) {
-      padding-bottom: 102;
-      
-      &__items {
-        gap: 27px;
-      }
-      &__item {
-        width: 330px;
-      }
+    padding-bottom: 102;
+
+    &__items {
+    }
+    &__item {
+      width: 330px;
+    }
+  }
+
+  @media (min-width: 1475px) {
+    &__img {
+      position: absolute;
+      left: 5%;
+      top: 31px;
+    }
+
+    &__title-container {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-bottom: 180px;
+      padding-right: 195px;
+      z-index: 2;
+    }
+
+    &__best {
+      max-width: 897px;
+      transform: none;
+      left: 0;
+      top: 10%;
+    }
   }
 
   @media (min-width: 1640px) {
-      padding-left: clamp(130px, 14vw, 260px);
-      padding-right: clamp(130px, 14vw, 260px);
+    &__img {
+      left: 9.5%;
+      top: 3%;
+    }
 
+    &__best {
+      left: 0;
+      top: 10%;
+    }
+  }
 
+  @media (min-width: 1920px) {
+    padding-left: 260px;
+    padding-right: 260px;
+
+    &__title-container {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-bottom: 190px;
+      padding-right: 195px;
+    }
   }
 }
