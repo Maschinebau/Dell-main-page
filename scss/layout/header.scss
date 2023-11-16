@@ -80,6 +80,8 @@
   &__nav-button {
     background-image: url(/public/nav-icon.svg);
     transition: transform 0.3s ease;
+    width: 46px;
+    height: 46px;
 
     &.active {
       background-image: url(/public/closenav-icon.svg);
